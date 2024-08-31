@@ -3,13 +3,15 @@
   "version": "0.5.0",
   "private": true,
   "dependencies": {
+    "@babel/helper-builder-react-jsx": "^7.24.7",
     "axios": "^0.19.0",
+    "babel-helper-builder-react-jsx": "^6.26.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "start:lambda": "netlify-lambda serve src/lambda",
     "build": "run-p build:**",
     "build:app": "react-scripts build",
