@@ -10,7 +10,7 @@ function TextInput({ type = "text", label }) {
   return (
     <div className="input-container">
       <input type={type} value={value} onChange={handleChange} />
-      <label className={value && "filled"} htmlFor={name}>
+      <label className={value && "filled"} htmlFor="name">
         {label}
       </label>
     </div>
