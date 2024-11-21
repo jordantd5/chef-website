@@ -1,0 +1,20 @@
+.hero{
+  height: 100vh;
+  width: 100vw;
+  background-color: #293c3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1.hero-title{
+  margin: 0;
+  color: #f7f9f8
+}
+
+p.hero-subtitle{
+  color: #f7f9f8;
+  font-size: 1.5rem;
+  margin-top: 16px;
+}
