@@ -35,7 +35,7 @@ function TextAreaInput({ label }) {
 }
 
 function Radio() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState("email");
 
   function handleChange(e) {
     setValue(e.target.value);
@@ -44,38 +44,46 @@ function Radio() {
   return (
     <div className="radio-container">
       <p>Preferred communication</p>
-      <div class="switch-field">
+      <div className="switch-field">
         <input
           type="radio"
           id="radio-one"
           name="switch-one"
           value="email"
-          checked
+          checked={value === "email"}
           onChange={handleChange}
         />
-        <label for="radio-one">Email</label>
+        <label htmlFor="radio-one">Email</label>
         <input
           type="radio"
           id="radio-two"
           name="switch-one"
           value="text"
+          checked={value === "text"}
           onChange={handleChange}
         />
-        <label for="radio-two">Text</label>
+        <label htmlFor="radio-two">Text</label>
       </div>
     </div>
   );
 }
 
 function Contact() {
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log("hi");
+  }
   return (
     <div className="contact">
-      <form>
+      <form onSubmit={handleSubmit}>
         <TextInput label="Full Name" />
         <TextInput label="Phone Number" />
         <TextInput label="Email" />
         <Radio />
         <TextAreaInput label="I'm interested in..." />
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
       </form>
     </div>
   );

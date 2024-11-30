@@ -146,3 +146,24 @@ form {
 .switch-field label:last-of-type {
 	border-radius: 0 4px 4px 0;
 }
+
+/* button */
+
+.submit-button {
+  width: 100%;
+  background-color: #f7f9f8;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #f7f9f8;
+  outline: none;
+  opacity: 0.6;
+  padding: 0px 24px;
+  color: #293c3a;
+  cursor: pointer;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  font-size: 24px;
+}
+
+.submit-button:hover {
+  opacity: 1;
+}
