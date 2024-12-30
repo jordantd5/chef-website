@@ -1,17 +1,18 @@
 import React from "react";
 
 function Nav() {
-  // function onClick(ref) {
-  // const node = ReactDOM.findDOMNode(this.refs[ref]);
-  // if (node) {
-  //   node.present.scrollIntoView();
-  // }
-  // }
+  function onClick(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
     <div className="nav">
-      {/* <p onClick={onClick("hero")}>home</p>
-      <p onClick={onClick("contact")}>contact</p> */}
+      <p onClick={() => onClick("hero")}>home</p>
+      <p onClick={() => onClick("about")}>about</p>
+      <p onClick={() => onClick("contact")}>contact</p>
     </div>
   );
 }

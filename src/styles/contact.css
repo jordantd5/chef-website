@@ -140,11 +140,11 @@ form {
 }
 
 .switch-field label:first-of-type {
-	border-radius: 4px 0 0 4px;
+	border-radius: 24px 0 0 24px;
 }
 
 .switch-field label:last-of-type {
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 24px 24px 0;
 }
 
 /* button */
