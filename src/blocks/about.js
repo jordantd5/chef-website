@@ -1,10 +1,11 @@
 import React from "react";
+import headshot from '../imgs/headshot.jpeg'
 
 function About() {
   return (
     <div id="about" className="about">
       <div className="about-photo">
-        <div className="fake-img"></div>
+        <img src={headshot} alt="headshot" className="headshot" />
       </div>
       <div className="about-content">
         <h2>About Me</h2>

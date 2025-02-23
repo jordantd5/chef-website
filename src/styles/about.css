@@ -8,14 +8,14 @@
   flex-direction: row;
   color: #f7f9f8;
   text-align: center;
+  gap: 10%;
 }
 
 .about-photo, .about-content{
-  width: 30%;
+  width: 35%;
 }
 
-.fake-img {
-  background-color: orange;
-  width: 300px;
-  height: 400px;
+.headshot {
+  width: 100%;
+  height: auto;
 }
