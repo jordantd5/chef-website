@@ -1,18 +1,25 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
-function Nav() {
+function Nav({activeSection}) {
+  const [active, setActive] = useState(activeSection);
+
+  const sections = ["hero", "about", "services", "contact"];
+
   function onClick(id) {
+    setActive(id)
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   }
 
+  useEffect(() => {
+    setActive(activeSection);
+  }, [activeSection])
+
   return (
     <div className="nav">
-      <p onClick={() => onClick("hero")}>home</p>
-      <p onClick={() => onClick("about")}>about</p>
-      <p onClick={() => onClick("contact")}>contact</p>
+      {sections.map(section => <p className={active === section ? 'active' : ''} key={`nav-${section}`} onClick={() => onClick(section)}>{section}</p>)}
     </div>
   );
 }

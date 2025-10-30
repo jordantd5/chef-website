@@ -167,3 +167,26 @@ form {
 .submit-button:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 767px) {
+  form {
+    width: 80%;
+  }
+
+  .input-container {
+    width: 100%;
+  }
+
+  .input-container label {
+    transform: translate(16px, 8.5px) scale(1.5);
+    font-size: 12px;
+  }
+
+  .input-container:focus-within label {
+    transform: translate(16px, -11px) scale(1);
+  }
+
+  .input-container .filled {
+    transform: translate(16px, -11px) scale(1);
+  }
+}

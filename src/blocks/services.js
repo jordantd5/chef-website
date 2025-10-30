@@ -21,7 +21,7 @@ function Services() {
 
       <div className="services-list">
         {services.map(service => 
-          <div className="service">
+          <div key={service.name} className="service">
             <p className="service-name">{service.name}</p>
             <p className="service-price">{service.price}</p>
             <p className="service-description">{service.description}</p>

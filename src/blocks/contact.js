@@ -97,7 +97,7 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="contact">
+    <div className="contact">
       <form ref={form} onSubmit={handleSubmit}>
         <TextInput
           label="Full Name"
