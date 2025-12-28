@@ -27,6 +27,7 @@
 
 .service-name {
   width: 20%;
+  font-weight: bold;
 }
 
 .service-price {
