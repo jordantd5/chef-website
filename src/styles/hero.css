@@ -22,7 +22,6 @@ p.hero-subtitle{
 
 .hero-img {
   max-width: 100%;
-  /* opacity: 80%; */
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -30,3 +29,8 @@ p.hero-subtitle{
   z-index: -1;
 }
 
+@media only screen and (max-width: 767px) {
+  .hero-img {
+    min-height: 100vh;
+  }
+}

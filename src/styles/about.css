@@ -9,13 +9,31 @@
   color: #f7f9f8;
   text-align: center;
   gap: 10%;
+  padding-left: 180px;
+  padding-right: 180px;
+  box-sizing: border-box;
 }
 
 .about-photo, .about-content{
-  width: 35%;
+  width: 40%;
 }
 
 .headshot {
   width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .about{
+    height: unset;
+    width: 100%;
+    padding: 20vw 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-photo, .about-content{
+    width: 80%;
+  }
 }

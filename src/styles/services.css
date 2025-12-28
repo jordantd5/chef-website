@@ -10,7 +10,8 @@
 }
 
 .services-list {
-  width: 80%;
+  padding-left: 180px;
+  padding-right: 180px;
 }
 
 .service {
@@ -34,4 +35,34 @@
 
 .service-description {
   width: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+  .services {
+    height: unset;
+  }
+
+  .services-list {
+    padding: unset;
+    width: 80%;
+  }
+  
+  .service {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .service-name {
+    width: 40%;
+  }
+  
+  .service-price {
+    width: 40%;
+    text-align: end;
+  }
+
+  .service-description {
+    width: 100%;
+    margin-top: 0;
+  }
 }
