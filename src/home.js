@@ -14,6 +14,11 @@ function Home() {
 
   
   useEffect(() => {
+    const heroNode = heroRef.current;
+    const aboutNode = aboutRef.current;
+    const servicesNode = servicesRef.current;
+    const contactNode = contactRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,17 +31,18 @@ function Home() {
     );
 
     // Observe each section
-    if (heroRef.current) observer.observe(heroRef.current);
-    if (aboutRef.current) observer.observe(aboutRef.current);
-    if (servicesRef.current) observer.observe(servicesRef.current);
-    if (contactRef.current) observer.observe(contactRef.current);
+    if (heroNode) observer.observe(heroNode);
+    if (aboutNode) observer.observe(aboutNode);
+    if (servicesNode) observer.observe(servicesNode);
+    if (contactNode) observer.observe(contactNode);
 
     return () => {
       // Cleanup: unobserve all sections when component unmounts
-      if (heroRef.current) observer.unobserve(heroRef.current);
-      if (aboutRef.current) observer.unobserve(aboutRef.current);
-      if (servicesRef.current) observer.unobserve(servicesRef.current);
-      if (contactRef.current) observer.unobserve(contactRef.current);
+      if (heroNode) observer.unobserve(heroNode);
+      if (aboutNode) observer.unobserve(aboutNode);
+      if (servicesNode) observer.unobserve(servicesNode);
+      if (contactNode) observer.unobserve(contactNode);
+      observer.disconnect();
     };
   }, []);
 
