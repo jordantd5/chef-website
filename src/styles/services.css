@@ -20,6 +20,10 @@
   border-bottom: 1px solid #f7f9f8;
 }
 
+.not-active-service {
+  filter: blur(1px);
+}
+
 .service-name {
   width: 20%;
 }

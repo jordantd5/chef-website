@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 const services = [{
   name: 'Basic',
@@ -15,13 +15,29 @@ const services = [{
 }];
 
 function Services() {
+  const [active, setActive] = useState(services.map(service => service.name));
+
+  const handleOnMouseEnter = (section) => {
+    console.log(active)
+    setActive([section])
+  }
+
+  const handleOnMouseLeave = () => {
+    setActive(services.map(service => service.name))
+  }
+
   return (
     <div id="services" className="services">
       <h2>Services</h2>
 
       <div className="services-list">
         {services.map(service => 
-          <div key={service.name} className="service">
+          <div
+            key={service.name}
+            className={`service ${active.includes(service.name) ? 'active-service' : 'not-active-service'}`}
+            onMouseEnter={() => handleOnMouseEnter(service.name)}
+            onMouseLeave={handleOnMouseLeave}
+          >
             <p className="service-name">{service.name}</p>
             <p className="service-price">{service.price}</p>
             <p className="service-description">{service.description}</p>
