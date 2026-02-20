@@ -11,7 +11,15 @@
 
 h1.hero-title{
   margin: 0;
-  color: #f7f9f8
+  color: #f7f9f8;
+  border-right: 0.08em solid gray;
+    animation: blink-caret .75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: gray; }
 }
 
 p.hero-subtitle{
